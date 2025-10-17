@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import os 
+import os
 import numpy as np
 import pandas as pd
 from mlProject.pipeline.prediction import PredictionPipeline
@@ -15,7 +15,7 @@ def homePage():
 @app.route('/train',methods=['GET'])  # route to train the pipeline
 def training():
     os.system("python main.py")
-    return "Training Successful!" 
+    return "Training Successful!"
 
 
 @app.route('/predict',methods=['POST','GET']) # route to show the predictions in a web UI
@@ -34,11 +34,11 @@ def index():
             pH =float(request.form['pH'])
             sulphates =float(request.form['sulphates'])
             alcohol =float(request.form['alcohol'])
-       
-         
+
+
             data = [fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol]
             data = np.array(data).reshape(1, 11)
-            
+
             obj = PredictionPipeline()
             predict = obj.predict(data)
 
@@ -54,4 +54,5 @@ def index():
 
 if __name__ == "__main__":
 	# app.run(host="0.0.0.0", port = 8080, debug=True)
+    # ready for deployment
 	app.run(host="0.0.0.0", port = 8080)
