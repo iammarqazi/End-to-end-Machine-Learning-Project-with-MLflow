@@ -9,7 +9,7 @@
 4. Update the entity
 5. Update the configuration manager in src config
 6. Update the components
-7. Update the pipeline 
+7. Update the pipeline
 8. Update the main.py
 9. Update the app.py
 
@@ -74,7 +74,7 @@ Run this to export as env variables:
 
 export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow.mlflow
 
-export MLFLOW_TRACKING_USERNAME=entbappy 
+export MLFLOW_TRACKING_USERNAME=entbappy
 
 export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
 
@@ -101,7 +101,7 @@ export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
 
 	2. Push your docker image to ECR
 
-	3. Launch Your EC2 
+	3. Launch Your EC2
 
 	4. Pull Your image from ECR in EC2
 
@@ -113,22 +113,22 @@ export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
 
 	2. AmazonEC2FullAccess
 
-	
+
 ## 3. Create ECR repo to store/save docker image
     - Save the URI: 566373416292.dkr.ecr.ap-south-1.amazonaws.com/mlproj
 
-	
-## 4. Create EC2 machine (Ubuntu) 
+
+## 4. Create EC2 machine (Ubuntu)
 
 ## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
+
+
 	#optinal
 
 	sudo apt-get update -y
 
 	sudo apt-get upgrade
-	
+
 	#required
 
 	curl -fsSL https://get.docker.com -o get-docker.sh
@@ -138,7 +138,7 @@ export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
 	sudo usermod -aG docker ubuntu
 
 	newgrp docker
-	
+
 # 6. Configure EC2 as self-hosted runner:
     setting>actions>runner>new self hosted runner> choose os> then run command one by one
 
@@ -158,7 +158,7 @@ export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
 
 
 
-## About MLflow 
+## About MLflow
 MLflow
 
  - Its Production Grade
